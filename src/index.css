@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cherry-pink: #ff4e7a;
+  --cherry-pink-light: #fff0f5;
+  --cherry-pink-dark: #ffeef4;
+  --text-dark: #1e1e1e;
+  --text-gray: #787c82;
+  --yellow-badge: #ffeebe;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Baloo 2', cursive;
+}
+
+.hero-title {
+  font-family: 'Fredoka', cursive;
+}
+
+.btn-cherry {
+  background-color: var(--cherry-pink);
+  color: white;
+  border-radius: 32px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 12px 24px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-cherry:hover {
+  box-shadow: 0 6px 16px rgba(255, 78, 122, 0.25);
+  transform: translateY(-2px);
+  background-color: #ff3567;
+  color: white;
+}
+
+.card {
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  border: none;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  transition: transform 0.6s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.form-control {
+  border-radius: 12px;
+  padding: 12px 16px;
+  border: 2px solid #f3f3f3;
+}
+
+.form-control:focus {
+  border-color: var(--cherry-pink);
+  box-shadow: 0 0 0 0.25rem rgba(255, 78, 122, 0.25);
+}
+
+.badge-special {
+  background-color: var(--yellow-badge);
+  color: #8a7a00;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 32px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+}
+
+.section-padding {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.section-title {
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--cherry-pink);
+  border-radius: 2px;
+}
+
+/* Cloud background */
+.cloud-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.cloud-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="none" viewBox="0 0 200 200"><path fill="white" fill-opacity="0.3" d="M150 100C150 122.09 132.09 140 110 140C87.91 140 70 122.09 70 100C70 77.91 87.91 60 110 60C132.09 60 150 77.91 150 100Z"/><path fill="white" fill-opacity="0.3" d="M100 50C100 77.61 77.61 100 50 100C22.39 100 0 77.61 0 50C0 22.39 22.39 0 50 0C77.61 0 100 22.39 100 50Z"/><path fill="white" fill-opacity="0.3" d="M200 50C200 77.61 177.61 100 150 100C122.39 100 100 77.61 100 50C100 22.39 122.39 0 150 0C177.61 0 200 22.39 200 50Z"/></svg>');
+  opacity: 0.5;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
